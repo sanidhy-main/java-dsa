@@ -7,11 +7,11 @@ class Solution {
         while (left < right) {
             if (nums[mid] > nums[right]) {
                 left = mid + 1;
-                mid = (left + right) / 2;
             } else {
                 right = mid;
-                mid = (left + right) / 2;
-        }
+            }
+
+            mid = (left + right) / 2;
         }
 
         return nums[right];
