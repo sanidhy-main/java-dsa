@@ -1,30 +1,31 @@
 class Solution {
     public int subarraySum(int[] nums, int k) {
-        int sum = 0;
-        int currentSum = 0;
-        int previousPrefix;
         int[] prefix = new int[nums.length];
-        int sub = 0;
-
+        int prefixSum = 0;
+        int subArrays = 0;
         HashMap<Integer, Integer> map = new HashMap<>();
-        map.put(0, 1);
 
         for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
-            prefix[i] = sum;
+            prefixSum += nums[i];
+            prefix[i] = prefixSum;
         }
 
-        for (int i = 0; i < nums.length; i++) {
-            currentSum += nums[i];
-            previousPrefix = prefix[i];
-
-            if (map.containsKey(currentSum - k)) {
-                sub += map.get(currentSum - k);
+        for (int j = 0; j < nums.length; j++) {
+            if (prefix[j] ==  k) {
+                subArrays++;
             }
             
-            map.put(currentSum, map.getOrDefault(currentSum, 0) + 1);
+            if (map.containsKey(prefix[j]- k)) {
+                subArrays += map.get(prefix[j] - k);
+            }
+            
+            if (map.containsKey(prefix[j])) {
+                map.put(prefix[j], map.get(prefix[j]) + 1);
+            } else {
+                map.put(prefix[j], 1);
+            }
         }
-       
-        return sub;
+
+        return subArrays;
     }
 }
