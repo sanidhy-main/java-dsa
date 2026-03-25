@@ -5,11 +5,9 @@ class Solution {
         if (needle.length() == 0) {
             return 0;
         }
-
-        for (int i = 0; i <= haystack.length() - needle.length();  i++) {
-            if (haystack.charAt(i) != needle.charAt(0)) {
-                continue;
-            } else {
+        
+        for (int i = 0; i <= haystack.length() - needle.length(); i++) {
+            if (haystack.charAt(i) == needle.charAt(0)) {
                 int j;
                 for (j = 1; j < needle.length(); j++) {
                     if (haystack.charAt(i + j) != needle.charAt(j)) {
@@ -20,9 +18,10 @@ class Solution {
                 if (j == needle.length()) {
                     return i;
                 }
+            } else {
+                continue;
             }
         }
-
-        return result;
+    return result;
     }
 }
