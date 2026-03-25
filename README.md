@@ -46,6 +46,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/sanidhy-main/test-repo/tree/master/0001-two-sum) |
+| [0003-longest-substring-without-repeating-characters](https://github.com/sanidhy-main/java-dsa/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0217-contains-duplicate](https://github.com/sanidhy-main/test-repo/tree/master/0217-contains-duplicate) |
 | [0560-subarray-sum-equals-k](https://github.com/sanidhy-main/test-repo/tree/master/0560-subarray-sum-equals-k) |
 ## Dynamic Programming
@@ -61,6 +62,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/sanidhy-main/java-dsa/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0014-longest-common-prefix](https://github.com/sanidhy-main/java-dsa/tree/master/0014-longest-common-prefix) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/sanidhy-main/java-dsa/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0125-valid-palindrome](https://github.com/sanidhy-main/java-dsa/tree/master/0125-valid-palindrome) |
@@ -73,4 +75,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0014-longest-common-prefix](https://github.com/sanidhy-main/java-dsa/tree/master/0014-longest-common-prefix) |
+## Sliding Window
+|  |
+| ------- |
+| [0003-longest-substring-without-repeating-characters](https://github.com/sanidhy-main/java-dsa/tree/master/0003-longest-substring-without-repeating-characters) |
 <!---LeetCode Topics End-->
