@@ -1,42 +1,45 @@
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
-        Arrays.sort(nums);
-        List<List<Integer>> sol = new ArrayList<>();
+       Arrays.sort(nums);
 
-        int ptrA = 0;
-        int ptrL = 1;
-        int ptrR = nums.length - 1;
+       List<List<Integer>> li = new ArrayList<>();
 
-        for (ptrA = 0;  ptrA < nums.length - 2; ptrA++) {
-            if (ptrA > 0 && nums[ptrA] == nums[ptrA - 1]) {
+        for (int left = 0; left < nums.length - 2; left++) {
+            int ptr1 = left + 1;
+            int ptr2 = nums.length - 1;
+
+            if (left > 0 && nums[left] == nums[left - 1]) {
                 continue;
             }
 
-            ptrL = ptrA + 1;
-            ptrR = nums.length - 1;
+            while (ptr1 < ptr2) {
+                if (nums[left] + nums[ptr1] + nums[ptr2] == 0) {
+                    List<Integer> result = new ArrayList<>();
 
-        while (ptrL < ptrR) {
-            if (nums[ptrL] + nums[ptrR] + nums[ptrA] > 0) {
-                ptrR--;
-            } else if (nums[ptrL] + nums[ptrR] + nums[ptrA] < 0) {
-                ptrL++;
-            } else {
-                sol.add(Arrays.asList(nums[ptrA], nums[ptrL], nums[ptrR]));
+                    result.add(nums[left]);
+                    result.add(nums[ptr1]);
+                    result.add(nums[ptr2]);
 
-                while (ptrL < ptrR && nums[ptrL] == nums[ptrL + 1]) {
-                    ptrL++;
+                    li.add(result);
+
+                    ptr1++;
+                    ptr2--;
+
+                    while (ptr1 < ptr2 && nums[ptr1] == nums[ptr1 - 1]) {
+                        ptr1++;
+                    }
+
+                    while (ptr1 < ptr2 && nums[ptr2] == nums[ptr2 + 1]) {
+                        ptr2--;
+                    }
+
+                } else if (nums[left] + nums[ptr1] + nums[ptr2] < 0) {
+                    ptr1++;
+                } else if (nums[left] + nums[ptr1] + nums[ptr2] > 0) {
+                    ptr2--;
                 }
-
-                while (ptrL < ptrR && nums[ptrR] == nums[ptrR - 1]) {
-                    ptrR--;
-                }
-
-                ptrL++;
-                ptrR--;
             }
         }
-        }
-        
-        return sol;
+        return li;
     }
 }
