@@ -7,10 +7,9 @@ class Solution {
             if (nums[right] != 0) {
                 nums[left] = nums[right];
                 left++;
-                right++;
-            } else {
-                right++;
             }
+            
+                right++;
         }
 
         while (left < nums.length) {
