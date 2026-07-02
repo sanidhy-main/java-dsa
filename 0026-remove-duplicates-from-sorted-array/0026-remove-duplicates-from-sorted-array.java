@@ -9,6 +9,7 @@ class Solution {
         } else {
             left++;
             nums[left] = nums[right];
+            right++;
         }
        }
 
