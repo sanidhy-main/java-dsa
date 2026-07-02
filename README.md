@@ -16,6 +16,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/sanidhy-main/test-repo/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/sanidhy-main/test-repo/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/sanidhy-main/java-dsa/tree/master/0167-two-sum-ii-input-array-is-sorted) |
+| [0169-majority-element](https://github.com/sanidhy-main/java-dsa/tree/master/0169-majority-element) |
 | [0217-contains-duplicate](https://github.com/sanidhy-main/test-repo/tree/master/0217-contains-duplicate) |
 | [0238-product-of-array-except-self](https://github.com/sanidhy-main/test-repo/tree/master/0238-product-of-array-except-self) |
 | [0283-move-zeroes](https://github.com/sanidhy-main/test-repo/tree/master/0283-move-zeroes) |
@@ -35,6 +36,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0015-3sum](https://github.com/sanidhy-main/test-repo/tree/master/0015-3sum) |
 | [0056-merge-intervals](https://github.com/sanidhy-main/test-repo/tree/master/0056-merge-intervals) |
+| [0169-majority-element](https://github.com/sanidhy-main/java-dsa/tree/master/0169-majority-element) |
 | [0217-contains-duplicate](https://github.com/sanidhy-main/test-repo/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/sanidhy-main/java-dsa/tree/master/0242-valid-anagram) |
 ## Binary Search
@@ -48,11 +50,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/sanidhy-main/test-repo/tree/master/0004-median-of-two-sorted-arrays) |
 | [0053-maximum-subarray](https://github.com/sanidhy-main/test-repo/tree/master/0053-maximum-subarray) |
+| [0169-majority-element](https://github.com/sanidhy-main/java-dsa/tree/master/0169-majority-element) |
 ## Hash Table
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/sanidhy-main/test-repo/tree/master/0001-two-sum) |
 | [0003-longest-substring-without-repeating-characters](https://github.com/sanidhy-main/java-dsa/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0169-majority-element](https://github.com/sanidhy-main/java-dsa/tree/master/0169-majority-element) |
 | [0217-contains-duplicate](https://github.com/sanidhy-main/test-repo/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/sanidhy-main/java-dsa/tree/master/0242-valid-anagram) |
 | [0383-ransom-note](https://github.com/sanidhy-main/java-dsa/tree/master/0383-ransom-note) |
@@ -92,5 +96,6 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Counting
 |  |
 | ------- |
+| [0169-majority-element](https://github.com/sanidhy-main/java-dsa/tree/master/0169-majority-element) |
 | [0383-ransom-note](https://github.com/sanidhy-main/java-dsa/tree/master/0383-ransom-note) |
 <!---LeetCode Topics End-->
