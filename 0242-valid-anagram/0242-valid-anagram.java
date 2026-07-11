@@ -3,18 +3,15 @@ class Solution {
         if (s.length() != t.length()) {
             return false;
         }
-
-        HashMap<Character, Integer> sMap = new HashMap<>();
+        
+        int[] arr = new int[26];
 
         for (int i = 0; i < s.length(); i++) {
-            sMap.put(s.charAt(i), sMap.getOrDefault(s.charAt(i), 0) + 1);
+            arr[s.charAt(i) - 'a']++;
+            arr[t.charAt(i) - 'a']--;
         }
 
-        for (int j = 0; j < t.length(); j++) {
-            sMap.put(t.charAt(j), sMap.getOrDefault(t.charAt(j), 0) - 1);
-        }
-
-        for (int count : sMap.values()) {
+        for (int count : arr) {
             if (count != 0) {
                 return false;
             }
