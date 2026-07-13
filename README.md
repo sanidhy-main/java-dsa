@@ -40,6 +40,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0283-move-zeroes](https://github.com/sanidhy-main/test-repo/tree/master/0283-move-zeroes) |
 | [0344-reverse-string](https://github.com/sanidhy-main/java-dsa/tree/master/0344-reverse-string) |
 | [0349-intersection-of-two-arrays](https://github.com/sanidhy-main/java-dsa/tree/master/0349-intersection-of-two-arrays) |
+| [0443-string-compression](https://github.com/sanidhy-main/java-dsa/tree/master/0443-string-compression) |
 ## Sorting
 |  |
 | ------- |
@@ -103,6 +104,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0344-reverse-string](https://github.com/sanidhy-main/java-dsa/tree/master/0344-reverse-string) |
 | [0383-ransom-note](https://github.com/sanidhy-main/java-dsa/tree/master/0383-ransom-note) |
 | [0387-first-unique-character-in-a-string](https://github.com/sanidhy-main/java-dsa/tree/master/0387-first-unique-character-in-a-string) |
+| [0443-string-compression](https://github.com/sanidhy-main/java-dsa/tree/master/0443-string-compression) |
 ## String Matching
 |  |
 | ------- |
