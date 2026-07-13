@@ -2,7 +2,6 @@ class Solution {
     public int compress(char[] chars) {
         int read = 0;
         int write = 0;
-        int i = 0;
 
         while (read < chars.length) {
             int count = 1; //reset number of characters to 1
