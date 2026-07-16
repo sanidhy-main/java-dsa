@@ -22,9 +22,6 @@ class Solution {
         }
 
         while (right < s2.length()) {
-            if (mainMap.equals(secMap)) {
-                return true;
-            } else {
                 mainMap.put(s2.charAt(left), mainMap.get(s2.charAt(left)) - 1);
                 if (mainMap.get(s2.charAt(left)) == 0) {
                     mainMap.remove(s2.charAt(left));
@@ -38,7 +35,6 @@ class Solution {
                 if (mainMap.equals(secMap)) {
                     return true;
                 }
-            }
         }
 
         return false;
