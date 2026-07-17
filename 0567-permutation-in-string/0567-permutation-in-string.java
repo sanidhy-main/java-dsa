@@ -5,36 +5,38 @@ class Solution {
         }
 
         int left = 0;
-        int right = left + s1.length();
-        HashMap<Character, Integer> mainMap = new HashMap<>();
-        HashMap<Character, Integer> secMap = new HashMap<>();
+        int right = s1.length();
 
-        for (int i = 0; i < right; i++) {
-            mainMap.put(s2.charAt(i), mainMap.getOrDefault(s2.charAt(i), 0) + 1);
+        HashMap<Character, Integer> freqMap = new HashMap<>();
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < s1.length(); i++) {
+            map.put(s1.charAt(i), map.getOrDefault(s1.charAt(i), 0) + 1);
         }
 
-        for (int j = 0; j < s1.length(); j++) {
-            secMap.put(s1.charAt(j), secMap.getOrDefault(s1.charAt(j), 0) + 1);
+        for (int j = left; j < right; j++) {
+            freqMap.put(s2.charAt(j), freqMap.getOrDefault(s2.charAt(j), 0) + 1);
         }
 
-        if (mainMap.equals(secMap)) {
-                return true;
+        if (map.equals(freqMap)) {
+            return true;
         }
 
         while (right < s2.length()) {
-                mainMap.put(s2.charAt(left), mainMap.get(s2.charAt(left)) - 1);
-                if (mainMap.get(s2.charAt(left)) == 0) {
-                    mainMap.remove(s2.charAt(left));
-                }
+            freqMap.put(s2.charAt(right), freqMap.getOrDefault(s2.charAt(right), 0) + 1);
+            right++;
 
-                left++;
+            freqMap.put(s2.charAt(left), freqMap.get(s2.charAt(left)) - 1);
 
-                mainMap.put(s2.charAt(right), mainMap.getOrDefault(s2.charAt(right), 0) + 1);
-                right++;
+            if (freqMap.get(s2.charAt(left)) == 0) {
+                freqMap.remove(s2.charAt(left));
+            }
 
-                if (mainMap.equals(secMap)) {
-                    return true;
-                }
+            left++;
+
+            if (map.equals(freqMap)) {
+                return true;
+            }
         }
 
         return false;
