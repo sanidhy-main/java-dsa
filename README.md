@@ -65,6 +65,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/sanidhy-main/test-repo/tree/master/0004-median-of-two-sorted-arrays) |
+| [0069-sqrtx](https://github.com/sanidhy-main/java-dsa/tree/master/0069-sqrtx) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/sanidhy-main/test-repo/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/sanidhy-main/java-dsa/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0349-intersection-of-two-arrays](https://github.com/sanidhy-main/java-dsa/tree/master/0349-intersection-of-two-arrays) |
@@ -145,6 +146,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0069-sqrtx](https://github.com/sanidhy-main/java-dsa/tree/master/0069-sqrtx) |
 | [0189-rotate-array](https://github.com/sanidhy-main/java-dsa/tree/master/0189-rotate-array) |
 ## Queue
 |  |
