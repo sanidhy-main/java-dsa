@@ -4,6 +4,7 @@ class Solution {
         int left = 0;
         int right = nums.length - 1;
         int mid = left + (right - left)/2;
+        int index = -1;
 
         while (left <= right) {
             mid = left + (right - left)/2;
@@ -12,19 +13,17 @@ class Solution {
             } else if (nums[mid] < target) {
                 left = mid + 1;
             } else {
-                while (mid >= 0 && nums[mid] == target) {
-                    mid--;
-                }
-
-                mid++;
-                result[0] = mid;
-                break;
+                index = mid;
+                right = mid - 1;
             }
         }
+
+        result[0] = index;
 
         left = 0;
         right = nums.length - 1;
         mid = left + (right - left)/2;
+        index = -1;
 
         while (left <= right) {
             mid = left + (right - left)/2;
@@ -33,15 +32,12 @@ class Solution {
             } else if (nums[mid] < target) {
                 left = mid + 1;
             } else {
-                while (mid < nums.length && nums[mid] == target) {
-                    mid++;
-                }
-
-                mid--;
-                result[1] = mid;
-                break;
+                index = mid;
+                left = mid + 1;
             }
         }
+
+        result[1] = index;
 
         return result;
     }
