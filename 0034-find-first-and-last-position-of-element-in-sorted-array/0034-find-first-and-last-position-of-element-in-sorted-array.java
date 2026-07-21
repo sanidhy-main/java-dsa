@@ -4,38 +4,44 @@ class Solution {
         int left = 0;
         int right = nums.length - 1;
         int mid = left + (right - left)/2;
-        int answer = -1;
 
         while (left <= right) {
             mid = left + (right - left)/2;
-            if (nums[mid] < target) {
+            if (nums[mid] > target) {
+                right = mid - 1;
+            } else if (nums[mid] < target) {
                 left = mid + 1;
-            } else if (nums[mid] > target) {
-                right = mid - 1;
             } else {
-                answer = mid;
-                right = mid - 1;
+                while (mid >= 0 && nums[mid] == target) {
+                    mid--;
+                }
+
+                mid++;
+                result[0] = mid;
+                break;
             }
         }
 
-        result[0] = answer;
         left = 0;
         right = nums.length - 1;
         mid = left + (right - left)/2;
 
         while (left <= right) {
             mid = left + (right - left)/2;
-            if (nums[mid] < target) {
-                left = mid + 1;
-            } else if (nums[mid] > target) {
+            if (nums[mid] > target) {
                 right = mid - 1;
-            } else {
-                answer = mid;
+            } else if (nums[mid] < target) {
                 left = mid + 1;
+            } else {
+                while (mid < nums.length && nums[mid] == target) {
+                    mid++;
+                }
+
+                mid--;
+                result[1] = mid;
+                break;
             }
         }
-
-        result[1] = answer;
 
         return result;
     }
