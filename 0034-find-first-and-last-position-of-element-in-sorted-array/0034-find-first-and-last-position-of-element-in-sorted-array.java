@@ -3,41 +3,43 @@ class Solution {
         int[] result = {-1, -1};
         int left = 0;
         int right = nums.length - 1;
-        int mid = left + (right - left)/2;
-        int index = -1;
+        int middle = left + (right - left)/2;
+        int answer = -1;
 
         while (left <= right) {
-            mid = left + (right - left)/2;
-            if (nums[mid] > target) {
-                right = mid - 1;
-            } else if (nums[mid] < target) {
-                left = mid + 1;
+            middle = left + (right - left)/2;
+
+            if (nums[middle] < target) {
+                left = middle + 1;
+            } else if (nums[middle] > target) {
+                right = middle - 1;
             } else {
-                index = mid;
-                right = mid - 1;
+                answer = middle;
+                right = middle - 1;
             }
         }
 
-        result[0] = index;
+        result[0] = answer;
 
         left = 0;
         right = nums.length - 1;
-        mid = left + (right - left)/2;
-        index = -1;
+        middle = left + (right - left)/2;
+        answer = -1;
 
         while (left <= right) {
-            mid = left + (right - left)/2;
-            if (nums[mid] > target) {
-                right = mid - 1;
-            } else if (nums[mid] < target) {
-                left = mid + 1;
+            middle = left + (right - left)/2;
+
+            if (nums[middle] < target) {
+                left = middle + 1;
+            } else if (nums[middle] > target) {
+                right = middle - 1;
             } else {
-                index = mid;
-                left = mid + 1;
+                answer = middle;
+                left = middle + 1;
             }
         }
 
-        result[1] = index;
+        result[1] = answer;
 
         return result;
     }
