@@ -2,35 +2,35 @@ class Solution {
     public int minEatingSpeed(int[] piles, int h) {
         int left = 1;
         int right = 0;
-        int result = 0;
+        int mid = left + (right - left)/2;
+
+        long timeNeeded = 0;
+        int answer = 0;
 
         for (int p : piles) {
             right = Math.max(p, right);
         }
 
-        int mid = left + (right - left) / 2;
-
         while (left <= right) {
-            mid = left + (right - left) / 2;
-
-            long timeNeeded = 0;
+            mid = left + (right - left)/2;
+            timeNeeded = 0;
 
             for (int pile : piles) {
-                if (pile <= mid) {
-                    timeNeeded++;
+                if (pile > mid) {
+                    timeNeeded += (pile + mid - 1) / mid;
                 } else {
-                    timeNeeded += ((long) pile + mid - 1) / mid;
+                    timeNeeded++;
                 }
             }
 
             if (timeNeeded > h) {
                 left = mid + 1;
             } else {
-                result = mid;
+                answer = mid;
                 right = mid - 1;
             }
         }
 
-        return result;
+        return answer;
     }
 }
